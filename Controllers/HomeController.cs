@@ -21,6 +21,7 @@ public class HomeController : Controller
      // GET: /Home/Into/ 
     public IActionResult Intro()
     {
+        ViewData["Title"] = "Introduction Page";
         ViewData["Section"] = "Intro Section  paragraph of text ";
         return View();
     }
