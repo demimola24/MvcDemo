@@ -3,4 +3,39 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to show intro details.</p>
+<div class="text-center">
+    <h1 class="display-4">Introduction</h1>
+    <br/>
+    <h3>Ademola Tikare</h3> 
+     <br/>
+    <div class="row">
+    <div class="col-md-4">
+       <form method="post" oninput="result.value=parseInt(first.value)+parseInt(second.value)" >
+        <fieldset>
+          <legend>Add Values</legend>
+          <div>
+            <label for="first">First Number: </label>
+            <input type="number" name="first" value="" />
+          </div>
+          <div>
+            <label for="second">Second Number: </label>
+            <input type="number" name="second" value="" />
+          </div>
+          <br/>
+          <div>
+          <output name="result" for="first second"></output>
+          </div>
+          <br/>
+          <div>
+            <label>&nbsp;</label>
+            <input type="submit" value="Submit" class="submit" />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+</div>           
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
